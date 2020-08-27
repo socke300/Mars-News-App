@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class="text-break" style="scroll-behavior: smooth;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Mars News App</title>
+    <meta property="og:image" content="">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nova+Square">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.css">
+    <link rel="stylesheet" href="assets/css/untitled.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md sticky-top navigation-clean-search" style="background-color: rgb(0,0,0);font-family: 'Nova Square', cursive;">
+        <div class="container-fluid"><a class="navbar-brand" data-bs-hover-animate="swing" href="#" style="color: rgb(255,255,255);" target="_top">Mars News App</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1" style="background-color: #ffffff;"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div
+                class="collapse navbar-collapse justify-content-end" id="navcol-1" style="padding-right: 0px;padding-left: 0px;">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item" role="presentation"><a class="nav-link active js-scroll-trigger" data-bs-hover-animate="tada" style="color: rgb(222,222,222);" href="#faq">FAQ</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active" data-bs-hover-animate="tada" href="#mars_rover" style="color: rgb(222,222,222);">Mars Rover</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active js-scroll-trigger" data-bs-hover-animate="tada" style="color: rgb(222,222,222);" href="#inSight">InSight</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active" data-bs-hover-animate="tada" href="#impressum" style="color: rgb(222,222,222);">Impressum</a></li>
+                </ul>
+        </div>
+        </div>
+    </nav>
+    <div class="text-break flex-grow-0 flex-shrink-0 mb-xl-auto" style="background: url(assets/img/mars-884709_1920.jpg);">
+        <div style="background-color: rgba(0,0,0,0.66);padding-bottom: 46px;">
+            <h1 class="text-center text-white glow" data-bs-hover-animate="pulse" style="font-size: 55px;font-family: 'Nova Square', cursive;padding-top: 115px;text-decoration: underline;text-shadow: 0px 0px 20px #003f87;">Entdecken Sie jetzt, die neusten<br>Informationen vom Mars/-Rover!</h1>
+            <div class="container" style="padding-top: 147px;">
+                <div class="row" style="padding-top: 9px;padding-bottom: 0px;">
+                    <div class="col" style="padding-top: 3px;padding-left: 0px;">
+                        <h1 class="text-center" style="color: rgb(255,255,255);font-size: 30px;text-decoration: underline;padding-left: 0px;font-family: 'Nova Square', cursive;text-shadow: 0px 0px 20px #003f87;">Wähle ein Datum aus:</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-center d-xl-flex justify-content-center" style="padding-top: 0px;"><input class="form-control-lg" data-bs-hover-animate="pulse" id="datum_eingabe" type="date" style="text-align: left;color: rgb(0,0,0);background-color: rgb(255,255,255);font-family: 'Nova Square', cursive;" required=""><a class="btn btn-dark btn-lg js-scroll-trigger"
+                            role="button" style="margin-left: 12px;" href="#first" onclick="setDate()">GO</a></div>
+                </div>
+                <div class="row" id="first" style="padding-top: 159px;padding-right: 0px;padding-left: 0px;padding-bottom: 0px;min-height: 0px;">
+                    <div class="col" data-aos="fade-up" data-aos-duration="1000" style="filter: brightness(100%);opacity: 1;border: 1px none rgb(255,255,255);border-right-style: solid;padding-right: 15px;margin-right: 0px;padding-top: 0px;">
+                        <h1 style="color: rgb(255,255,255);text-align: center;font-size: 30px;text-decoration: underline;font-family: 'Nova Square', cursive;">InSight<br></h1>
+                        <h1 class="text-center text-white" id="sol_insight" style="font-size: 25px;/*text-decoration: underline;*/">SOL -</h1>
+                        <h1 class="text-center text-white" id="datum1" style="font-size: 25px;/*text-decoration: underline;*/">25.August</h1>
+                        <div class="row">
+                            <div class="col" style="border-top: 1px solid rgb(255,255,255) ;border-right: 1px none rgb(255,255,255) ;">
+                                <h1 style="font-family: 'Nova Square', cursive;color: rgb(255,255,255);padding-top: 37px;">Temperatur:</h1>
+                            </div>
+                        </div>
+                        <div class="row" style="border-style: none;border-color: rgb(255,255,255);border-top-width: 1px;border-top-style: none;">
+                            <div class="col">
+                                <h1 class="text-white" style="font-size: 25px;text-decoration: underline;">Höchste:</h1>
+                            </div>
+                            <div class="col" style="color: rgb(255,255,255);">
+                                <h1 id="hoechste" style="font-size: 25px;">-</h1>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <h1 class="text-white" style="font-size: 25px;text-decoration: underline;">Niedrigste:</h1>
+                            </div>
+                            <div class="col">
+                                <h1 id="niedrigste" style="color: rgb(255,255,255);font-size: 25px;">-</h1>
+                            </div>
+                        </div>
+                        <h1 style="font-family: 'Nova Square', cursive;color: rgb(255,255,255);padding-top: 48px;">Wind:</h1>
+                        <div class="row" style="border-style: none;border-color: rgb(255,255,255);border-top-width: 1px;border-top-style: none;">
+                            <div class="col">
+                                <h1 class="text-white" style="font-size: 25px;text-decoration: underline;">Speed:</h1>
+                            </div>
+                            <div class="col" style="color: rgb(255,255,255);">
+                                <h1 id="speed" style="font-size: 25px;">-</h1>
+                            </div>
+                        </div>
+                        <div class="row" style="border-style: none;border-color: rgb(255,255,255);border-top-width: 1px;border-top-style: none;">
+                            <div class="col">
+                                <h1 class="text-white" style="font-size: 25px;text-decoration: underline;">Richtung:</h1>
+                            </div>
+                            <div class="col" style="color: rgb(255,255,255);">
+                                <h1 id="richtung" style="font-size: 25px;">-</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col" data-aos="fade-up" data-aos-duration="1000" style="border: 1px none rgb(255,255,255) ;">
+                        <h1 style="color: rgb(255,255,255);text-align: center;font-size: 30px;text-decoration: underline;font-family: 'Nova Square', cursive;">Marsrover</h1>
+                        <h1 class="text-center text-white" id="sol_rover" style="font-size: 25px;/*text-decoration: underline;*/">SOL -</h1>
+                        <h1 class="text-center text-white" id="datum2" style="font-size: 25px;/*text-decoration: underline;*/">25.August</h1>
+                        <div class="row" style="border-top: 1px solid rgb(255,255,255) ;">
+                            <div class="col text-center" style="padding-top: 23px;"><img class="img-fluid" id="foto" style="border-radius: 57px;max-height: 311px;border: 1px solid rgb(255,255,255) ;border-top-style: solid;" src="assets/img/1-PIA23764-RoverNamePlateonMars.png"></div>
+                        </div>
+                        <div class="text-center" style="padding-top: 15px;"><button class="btn btn-outline-info bt1" type="button" onclick="button(&quot;FHAZ&quot;)">FHAZ</button><button class="btn btn-outline-info bt1" type="button" onclick="button(&quot;RHAZ&quot;)">RHAZ</button><button class="btn btn-outline-info bt1" type="button" onclick="button(&quot;MAST&quot;)">MAST</button>
+                            <button
+                                class="btn btn-outline-info bt1" type="button" onclick="button(&quot;CHEMCAM&quot;)">CHEMCAM</button><button class="btn btn-outline-info bt1" type="button" onclick="button(&quot;MAHLI&quot;)">MAHLI</button><button class="btn btn-outline-info bt1" type="button" onclick="button(&quot;MARDI&quot;)">MARDI</button><button class="btn btn-outline-info bt1" type="button"
+                                    onclick="button(&quot;NAVCAM&quot;)">NAVCAM</button><button class="btn btn-outline-info bt1" type="button" onclick="button(&quot;PANCAM&quot;)">PANCAM</button><button class="btn btn-outline-info bt1" type="button" onclick="button(&quot;MINITES&quot;)">MINITES</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="faq" style="background-color: #ffffff;">
+        <h1 class="text-center" data-aos="fade-up" data-aos-duration="500" style="text-decoration: underline;font-size: 50px;font-family: 'Nova Square', cursive;padding-top: 68px;">FAQ</h1>
+        <div class="container">
+            <div class="row" data-aos="fade-up" data-aos-duration="1000" style="padding-top: 88px;padding-right: 0px;padding-left: 0px;">
+                <div class="col" style="padding-right: 30px;padding-left: 30px;">
+                    <h1 class="text-center" style="text-decoration: underline;font-size: 30px;font-family: 'Nova Square', cursive;padding-top: 0px;">Warum wird manchmal kein Foto <br>angezeigt?</h1>
+                    <h1 class="text-justify" style="font-size: 20px;padding-top: 35px;">Der Mars Rover verfügt über mehrere Kameras und die API stellt immer nur für den jeweiligen Tag nur eine gewisse Anzahl an Fotos von den unterschiedlichen Kameras zur Verfügung. Dabei kommt es vor das es von manchen Kameras eine lange
+                        Zeit keine Fotos gibt. Je Älter das Datum, kann es auch sein das es ein anderer Rover war, diese hatten weniger Kameras oder auch andere.</h1>
+                </div>
+                <div class="col" style="padding-right: 30px;padding-left: 30px;">
+                    <h1 class="text-center" style="text-decoration: underline;font-size: 30px;font-family: 'Nova Square', cursive;padding-top: 0px;">Warum wird nichts mehr <br>angezeigt?</h1>
+                    <h1 class="text-justify" style="font-size: 20px;padding-top: 35px;">Die API Anfragen sind begrenzt, wird das Limit ausgereizt kommt es vor dass nichts mehr angezeigt wird. Sollte das Limit erreicht sein, warten Sie bitte eine Stunde, dann wird der Zähler zurückgesetzt und die API gibt wieder eine Antwort
+                        zurück. Es kann aber auch sein das einfach keine Bilder für diesen Tag existieren oder noch nicht zu Erde angekommen sind. Bei der InSight API gibt es nur Daten von den letzten, maximal sieben Tagen.</h1>
+                </div>
+            </div>
+            <div class="row" data-aos="fade-up" data-aos-duration="1000" style="padding-top: 110px;padding-bottom: 43px;">
+                <div class="col" style="padding-right: 30px;padding-left: 30px;">
+                    <h1 class="text-break text-center" style="text-decoration: underline;font-size: 30px;font-family: 'Nova Square', cursive;padding-top: 0px;">Wie heißen die Abkürzungen der<br>Kameras?</h1>
+                    <h1 class="text-left" style="padding-top: 35px;font-size: 20px;">1.&nbsp;Front Hazard Avoidance Camera (FHAZ)<br>2.&nbsp;Rear Hazard Avoidance Camera (RHAZ)<br>3.&nbsp;Mast Camera (MAST)<br>4.&nbsp;Chemistry and Camera Complex<br>&nbsp; &nbsp;(CHEMCAM)<br>5.&nbsp;Mars Hand Lens Imager (MAHLI)<br>6.&nbsp;Mars
+                        Descent Imager (MARDI)<br>7.&nbsp;Navigation Camera (NAVCAM)<br>8.&nbsp;Panoramic Camera (PANCAM)<br>9. Miniature Thermal Emission Spectrometer<br>&nbsp; &nbsp;(MINITES)<br><br></h1>
+                </div>
+                <div class="col" style="padding-right: 30px;padding-left: 30px;">
+                    <h1 class="text-break text-center" style="text-decoration: underline;font-size: 30px;font-family: 'Nova Square', cursive;padding-top: 0px;">Warum das Wetter und den Mars Rover in Kombination?</h1>
+                    <h1 class="text-justify" style="padding-top: 35px;font-size: 20px;">Um jeden Tag neue Informationen zum Mars zu erhalten, bietet gerade der Mars Rover ein perfekte Lösung dafür, durch ihn ist es möglich neue Bilder vom Mars sehen zu können, z.B. Umgebung oder auch Probeanalysen von Gestein und Böden.
+                        Das Wetter gibt des Weiteren&nbsp; ebenfalls täglich neue Informationen. Da nicht jeden Tag eine Bahnbrechende Entdeckung gemacht wird (auf dem Mars), soll diese App Ihnen eine Möglichkeit geben auf dem laufendem zu bleiben und
+                        eventuell selber eine neue Entdeckung für sich selbst zu machen oder auch bei neuen Entdeckungen, erfahren Sie es gleich mit als Erster! ;)</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="mars_rover" style="background-color: #80643c;padding-bottom: 59px;color: rgb(255,255,255);">
+        <h1 class="text-center" data-aos="fade-up" data-aos-duration="500" style="text-decoration: underline;font-size: 50px;font-family: 'Nova Square', cursive;padding-top: 68px;color: rgb(255,255,255);">Mars Rover</h1>
+        <div class="container">
+            <div class="row" data-aos="fade-up" data-aos-duration="1000" style="padding-top: 88px;padding-right: 0px;padding-left: 0px;color: rgb(255,255,255);">
+                <div class="col">
+                    <picture><img class="img-fluid" src="assets/img/1-PIA23764-RoverNamePlateonMars.png" style="border-radius: 105px;border: 1px solid rgb(255,255,255) ;"></picture>
+                </div>
+                <div class="col" style="padding-right: 30px;padding-left: 30px;">
+                    <h1 class="text-left" style="font-size: 20px;padding-top: 0px;">Name:&nbsp;Curiosity<br>Gestartet:&nbsp;26.11.2011 <br>Ende: noch nicht in Aussischt<br>Kameras: Alle bis auf PANCAM und MINITES<br>Mission: Mars hinsichtlich seiner aktuellen und<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        &nbsp;vergangenen Eignung als Biosphäre erforschen<br><br>Welche Rover gabe es noch?<br>Bis zum 25. Mai 2011 gab es noch den Rover "Spirit" und bis zum&nbsp;10.&nbsp;Juni 2018 "Opportunity". Bei den beiden Rover wurde nach einiger
+                        Zeit der Kontakt verloren und dieser konnte nach langen versuchen auch nicht wieder hergestellt werden. :(<br></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="inSight" style="background-color: #ffffff;padding-bottom: 59px;color: rgb(255,255,255);">
+        <h1 class="text-center" data-aos="fade-up" data-aos-duration="500" style="text-decoration: underline;font-size: 50px;font-family: 'Nova Square', cursive;padding-top: 68px;color: rgb(0,0,0);">InSight</h1>
+        <div class="container">
+            <div class="row" data-aos="fade-up" data-aos-duration="1000" style="padding-top: 88px;padding-right: 0px;padding-left: 0px;color: rgb(255,255,255);">
+                <div class="col">
+                    <picture><img class="img-fluid" src="assets/img/Insight.png" style="border-radius: 105px;border: 1px solid rgb(0,0,0) ;"></picture>
+                </div>
+                <div class="col" style="padding-right: 30px;padding-left: 30px;">
+                    <h1 class="text-left" style="font-size: 20px;padding-top: 0px;color: rgb(0,0,0);">Name:&nbsp;InSight<br>Gestartet:&nbsp;05.05.2018<br>Ende: geplant 2020<br>Mission:&nbsp; <br>InSight hat einen einzelnen stationären Lander in der Elysium-Region&nbsp;auf dem Mars platziert, der tiefere Gesteinsschichten untersuchen
+                        und dadurch zur Klärung grundlegender Streitfragen der Planeten- und&nbsp;Sonnensystem-Wissenschaften um diejenigen Prozesse beitragen soll, die die Gesteinsplaneten des inneren Sonnensystems (inklusive der Erde) vor mehr als fünf
+                        Milliarden Jahren formten. (~Wikipedia)<br></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="impressum" style="background-color: #000000;color: rgb(255,255,255);">
+        <h1 class="text-center" data-aos="fade-up" data-aos-duration="500" style="text-decoration: underline;font-size: 20px;font-family: 'Nova Square', cursive;padding-top: 40px;color: rgb(255,255,255);">Impressum</h1>
+        <div class="container text-break" style="padding-top: 28px;padding-bottom: 21px;">
+            <div class="row">
+                <div class="col text-center">
+                    <h1 style="font-size: 15px;font-family: 'Nova Square', cursive;">Dienstanbieter:<br></h1>
+                    <h1 class="text-center" style="font-size: 15px;">Der Betrieb der Web-App "Mars News App"<br>ist eine kostenlose Dienstleistung von Marcel Gode.<br></h1>
+                    <h1 style="font-size: 15px;padding-top: 11px;font-family: 'Nova Square', cursive;">Anschrift:</h1>
+                    <h1 style="font-size: 15px;">Technische Hochschule Mittelhessen (THM)<br>University of Applied Sciences<br>Wiesenstraße 14<br>D-35390 Gießen<br></h1>
+                </div>
+                <div class="col">
+                    <h1 class="text-center" style="font-size: 15px;padding-top: 12px;padding-right: 0px;padding-left: 65px;">Telefon: +49 (0) 160 912 961 34<br>E-Mail: <a href="mailto:marcel.gode@mni.thm.de">marcel.gode@mni.thm.de</a><br><br>Sitz der Gesellschaft: Gießen<br>Rechtsform: GmbH<br><br>Amtsgericht: Gießen HRB 3036<br>USt-IdNr.: DE 188 685 037<br><br></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.js"></script>
+    <script src="assets/js/JavaScript.js"></script>
+</body>
+
+</html>
