@@ -5,8 +5,8 @@ Sehe dir die Seite auf [Heroku](https://mars-news-app.herokuapp.com) an. :)
 ## <u>Inhaltsverzeichnis</u>
 
 1. [Service](#service)
-2. [Installationsschritte](#Installationsschritte)
-3. [Google's Material Design Color System](#Google's Material Design Color System)
+2. [Installationsschritte](#installationsschritte)
+3. [Google's Material Design Color System](#googles-material-design-color-system)
 
 
 
