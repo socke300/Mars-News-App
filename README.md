@@ -26,7 +26,7 @@ Die Mars News App informiert einen über das vergangene und aktuelle Wetter auf 
    $ git clone https://git.thm.de/mgod03/mars-news-app.git
    $ cd mars-news-app
    $ npm install
-   $ npm start
+   $ set DEBUG=myapp:* & npm start
    ```
 
 3. Nun kannst du die Website unter [http://localhost:3000/](http://localhost:3000/) abrufen.
